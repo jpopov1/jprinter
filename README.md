@@ -1,46 +1,45 @@
 # jprinter
-je Python module za printanje na printer koji može printati tekst i slike sa računala i webstranica.
+is a Python module for printing images and text to the printer.
 
 
-# O jprinter-u
-Dependencies:
+# Dependencies
+* urllib.request
 * win32printing
-* PIL
-* urllib.request (samo za python3x)
 * win32print
 * win32ui
+* PIL
 
-Podržava samo Windows 10.
+jprinter only works for Python 3x on Windows 10.
 
-# Instalacija
-1. Skini zip
-2. Unpack jprinter.py u root directory
+# Installation
+1. Download the code
+2. Unpack jprinter.py into the root directory
 
-# Korištenje
-jprinter ima 3 funkcije:
-1. link, za slike na webstranicama
-2. img, za slike na računalu
-3. text, za tekst
+# Usage
+jprinter has 3 functions:
+1. link, for images on websites
+2. img, for images on the PC
+3. text, for text
 
-# Primjeri
-Za importati se koristi
+# Examples
+To import the module use
 ```python
 import jprinter
 ```
 
-**VAŽNO**: u argument se napiše **cijeli link** na webstranici
+**NOTE**: the argument requires the **whole link** of the website
 ```python
 jprinter.link("https://upload.wikimedia.org/wikipedia/commons/0/00/Two_adult_Guinea_Pigs_%28Cavia_porcellus%29.jpg")
 ```
 
-
+**NOTE**: the file **must** be in the same directory from where you are executing your .py script
 ```python
 jprinter.img("banana.png")
 ```
 
 
-**VAŽNO**: broj označava veličinu fonta
+**NOTE**: the number represents font size
 ```python
-jprinter.text("bok", 16)
+jprinter.text("Hello World!", 16)
 ```
 
